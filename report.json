@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "total_lines": 7,
+    "parsed_requests": 7,
+    "parse_failures": 0,
+    "unique_ips": 3,
+    "error_rate_4xx_5xx": 0.5714,
+    "time_range": {
+      "first": "2024-10-10T13:55:36+00:00",
+      "last": "2024-10-10T13:56:10+00:00"
+    }
+  },
+  "top_endpoints": [
+    {
+      "endpoint": "/",
+      "count": 1
+    },
+    {
+      "endpoint": "/products",
+      "count": 1
+    },
+    {
+      "endpoint": "/admin",
+      "count": 1
+    },
+    {
+      "endpoint": "/wp-login.php",
+      "count": 1
+    },
+    {
+      "endpoint": "/.env",
+      "count": 1
+    },
+    {
+      "endpoint": "/login",
+      "count": 1
+    },
+    {
+      "endpoint": "/api/orders",
+      "count": 1
+    }
+  ],
+  "status_code_breakdown": {
+    "200": 3,
+    "403": 1,
+    "404": 2,
+    "500": 1
+  },
+  "top_ips": [
+    {
+      "ip": "10.0.0.5",
+      "count": 3
+    },
+    {
+      "ip": "127.0.0.1",
+      "count": 2
+    },
+    {
+      "ip": "203.0.113.9",
+      "count": 2
+    }
+  ],
+  "issues": [
+    {
+      "type": "high_error_rate",
+      "message": "High proportion of 4xx/5xx responses.",
+      "error_rate": 0.5714,
+      "threshold": 0.1
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="brand">
+          <div class="brand__title">Weather Dashboard</div>
+          <div class="brand__subtitle">Fast, clean, and informative</div>
+        </div>
+        <button id="refreshBtn" class="button button--ghost" type="button">Refresh</button>
+      </header>
+
+      <section id="banner" class="banner banner--hidden" role="alert"></section>
+
+      <section class="card">
+        <div class="card__row card__row--top">
+          <div>
+            <div id="locationLabel" class="muted">Location</div>
+            <div id="description" class="headline">—</div>
+          </div>
+          <div class="temp">
+            <div id="temperature" class="temp__value">—</div>
+            <div class="temp__unit">°C</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="metric">
+            <div class="metric__label">Humidity</div>
+            <div id="humidity" class="metric__value">—</div>
+          </div>
+          <div class="metric">
+            <div class="metric__label">Wind</div>
+            <div id="wind" class="metric__value">—</div>
+          </div>
+          <div class="metric">
+            <div class="metric__label">Status</div>
+            <div id="status" class="metric__value">Ready</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cityFallback" class="card card--hidden">
+        <div class="card__title">Can’t detect location?</div>
+        <div class="muted">Enter your city to fetch weather.</div>
+
+        <div class="form">
+          <input id="cityInput" class="input" type="text" placeholder="e.g. Cairo" />
+          <button id="searchCityBtn" class="button" type="button">Search</button>
+        </div>
+
+        <div id="cityResults" class="results"></div>
+      </section>
+
+      <footer class="footer muted">
+        Data by Open-Meteo (no API key required).
+      </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
+
