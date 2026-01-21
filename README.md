@@ -14,7 +14,6 @@
 From the repository root:
 
 ```bash
-cd nagwa
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
@@ -51,7 +50,6 @@ Open `http://127.0.0.1:5000/` in your browser.
 From the repository root:
 
 ```bash
-cd nagwa
 python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
